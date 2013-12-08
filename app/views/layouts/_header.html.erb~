@@ -4,7 +4,6 @@
 			<%= link_to "sample app", '#', id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
-					<li><%= link_to "Links",    links_path %></li>
 					<li><%= link_to "Who am I?",    whoami_path %></li>
 					<li><%= link_to "Home",    root_path %></li>
 					<li><%= link_to "Help",    help_path %></li>

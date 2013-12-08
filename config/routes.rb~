@@ -1,20 +1,19 @@
-FinalProject::Application.routes.draw do
+Mytwitter::Application.routes.draw do
+  get "film/new"
  resources :users       # NEW LINE 
- resources :sessions, only: [:new, :create, :destroy]  # NEW LINE
-
+ resources :films
   #get "static_pages/home"
   #get "static_pages/help"
   #get "static_pages/about"
   #get "static_pages/contact"
   root 'static_pages#home'
-  get '/signup',  to: 'users#new'           
-  get '/signin',  to: 'sessions#new'             # NEW LINE
-  get '/signout', to: 'sessions#destroy',    via: 'delete'  # NEW LINE
-  get '/help',    to: 'static_pages#help',    via: 'get'
-  get '/about',   to: 'static_pages#about',   via: 'get'
-  get '/contact', to: 'static_pages#contact', via: 'get'
-  get '/whoami', to: 'static_pages#whoami', via: 'get'
-  get '/links', to: 'static_pages#links', via: 'get'
+  match '/films', to: 'films#new',              via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/help',    to: 'static_pages#help',    via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/whoami', to: 'static_pages#whoami', via: 'get'
+  match '/links', to: 'static_pages#links', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

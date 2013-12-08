@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'rename'
+gem'bcrypt-ruby','3.0.1'
+gem 'protected_attributes'
+gem 'devise', '3.0.0.rc'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
